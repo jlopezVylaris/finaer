@@ -4,7 +4,7 @@
     <main class="mt-10 h-auto overflow-hidden">
       <div class="columns-1">
         <h1 class="text-5xl text-center font-bold w-full lg:w-[100%]">
-          <span class="text-[#6568E6]">Preguntas frecuentes</span>
+          <span class="text-[#8A88FF]">Preguntas frecuentes</span>
         </h1>
 
         <div

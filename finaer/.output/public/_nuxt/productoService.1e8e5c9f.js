@@ -1,0 +1,1 @@
+import{r as e}from"./entry.b80fcda5.js";e([{id:3,name:"Casco de Seguridad con L\xE1mpara",category:"Equipos de Seguridad",stock:20},{id:4,name:"Detector de Gases",category:"Herramientas de Medici\xF3n",stock:15}]);
