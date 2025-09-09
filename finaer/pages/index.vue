@@ -8,7 +8,7 @@
       <div
         class="max-w-[90%] lg:max-w-[70%] text-center flex flex-col items-center justify-center"
       >
-        <h1 class="text-6xl text-[#6568E6] font-bold">
+        <h1 class="text-6xl text-[#8A88FF] font-bold">
           Conoce más sobre nosotros...
         </h1>
         <div class="mt-8 max-w-[85%] lg:max-w-[60%]">
@@ -74,7 +74,7 @@
                     </a>-->
           <a
             href="/nosotros/"
-            class="px-9 py-3 text-[rgba(8,133,243,255)] bg-white hover:bg-[#6568E6] hover:text-[#fff] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg shadow-md py-2 w-52 text-center sm:self-start self-center"
+            class="px-9 py-3 text-[#8A88FF] bg-white hover:bg-[#8A88FF] hover:text-[#fff] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg shadow-md py-2 w-52 text-center sm:self-start self-center"
             >Conoce más...</a>
             
         </article>

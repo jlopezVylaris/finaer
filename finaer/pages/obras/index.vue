@@ -4,7 +4,7 @@
       <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
         <!-- <h2 class="mb-8 lg:mb-16 text-3xl font-extrabold tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-4xl">Trabajamos con las siguientes obras sociales</h2> -->
         <!--<h2 class="mb-8 lg:mb-16 text-3xl md:text-5xl text-center text-[rgba(37,73,105,255)] dark:text-white md:text-4xl">Trabajamos con las siguientes obras sociales</h2>-->
-        <h1 class="text-6xl text-[#6568E6] text-center font-bold mb-5">
+        <h1 class="text-6xl text-[#8A88FF] text-center font-bold mb-5">
           Trabajamos con las siguientes<br />
           obras sociales
         </h1>

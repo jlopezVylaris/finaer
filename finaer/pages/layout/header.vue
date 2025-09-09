@@ -137,7 +137,7 @@
   >
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
       <div
-        class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4"
+        class="flex items-center justify-between max-w-screen-xl mx-auto p-4"
       >
         <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img
@@ -150,8 +150,8 @@
           class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse"
         >
           <a
-            href="/turnos"
-            class="text-white bg-[#008000] hover:bg-[#6568e6] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 text-center inline-flex items-center gap-3"
+            href="https://wa.me/5491122664785"
+            class="text-white bg-[#008000] hover:bg-[#8A88FF] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 text-center inline-flex items-center gap-3"
             >Turnos
             <svg
               width="15px"
@@ -168,7 +168,14 @@
           target="_blank"
             href="https://aplicacionmedicaweb.com.ar/tol-finaer/_client/turnosonline2.aspx"
             class="text-white bg-[#0000ff] hover:bg-[#6568e6] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 text-center inline-flex items-center gap-3"
-            >Turnos Online
+            >Turnos
+            <img
+              src="../../assets/images/online.png"
+              alt="Turnos Online"
+              width="16"
+              height="16"
+              style="object-fit:contain;"
+            />
           </a>
           
           <button
@@ -207,7 +214,7 @@
               <button
                 id="mega-menu-icons-dropdown-button"
                 data-dropdown-toggle="mega-menu-icons-dropdown"
-                class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                class="flex items-center justify-between w-full py-2 px-3 font-bold text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#8A88FF] md:p-0 dark:text-white md:dark:hover:text-[#8A88FF] dark:hover:bg-gray-700 dark:hover:text-[#8A88FF] md:dark:hover:bg-transparent dark:border-gray-700"
               >
                 Especialidades
                 <svg
@@ -238,7 +245,7 @@
                     <li>
                       <a
                         href="/cardiologia"
-                        class="flex items-center text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
+                        class="flex font-bold items-center text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
                       >
                         <span class="sr-only">Cardiología</span>
                         <!--<svg
@@ -263,7 +270,7 @@
                     <li>
                       <a
                         href="/diabetologia"
-                        class="flex items-center text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
+                        class="flex items-center font-bold text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
                       >
                         <span class="sr-only">Diabetología</span>
                         <!--<svg
@@ -297,7 +304,7 @@
                     <li>
                       <a
                         href="/diagnostico"
-                        class="flex items-center text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
+                        class="flex items-center font-bold text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
                       >
                         <span class="sr-only">Diagnóstico por imágenes</span>
                         <!--<svg
@@ -326,7 +333,7 @@
                     <li>
                       <a
                         href="/hemodialisis"
-                        class="flex items-center text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
+                        class="flex items-center font-bold text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
                       >
                         <span class="sr-only">Hemodialisis</span>
                         <!--<svg
@@ -355,7 +362,7 @@
                     <li>
                       <a
                         href="/nefrologia"
-                        class="flex items-center text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
+                        class="flex items-center font-bold text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
                       >
                         <span class="sr-only">Nefrologia</span>
                         <!--<svg
@@ -381,7 +388,7 @@
                     <li>
                       <a
                         href="/nutricion"
-                        class="flex items-center text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
+                        class="flex items-center font-bold text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
                       >
                         <span class="sr-only">Nutrición</span>
                         <!--<svg
@@ -406,7 +413,7 @@
                     <li>
                       <a
                         href="/uriologia"
-                        class="flex items-center text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
+                        class="flex items-center font-bold text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 group"
                       >
                         <span class="sr-only">Urología</span>
                         <!--<svg
@@ -435,7 +442,7 @@
             <li>
               <a
                 href="/nosotros"
-                class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block font-bold py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                 >Nosotros</a
               >
             </li>
@@ -443,7 +450,7 @@
             <li>
               <a
                 href="/faq"
-                class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block font-bold py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                 >Preguntas Frecuentes</a
               >
             </li>
@@ -451,7 +458,7 @@
             <li>
               <a
                 href="/contacto"
-                class="block py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                class="block font-bold py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                 >Contacto</a
               >
             </li>

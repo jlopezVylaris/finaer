@@ -14,14 +14,14 @@
           <header class="w-full lg:w-[50%] flex flex-col gap-4 self-center lg:self-start mt-20">
                        
             <h1 class="text-6xl text-center sm:text-start font-bold w-full lg:w-[90%]"> 
-                  <span class="text-[#6568E6]">
+                  <span class="text-[#8A88FF]">
                 Centro Médico Finaer
               </span>
             </h1>
             <p class="text-[#2C2F4C] text-base text-center sm:text-start">Es un centro médico Fundado en 2016, ubicado en el barrio de Almagro y especializado en nefrología y diálisis, con 705 m2 distribuido en 3 plantas, equipado con los más altos estándares de calidad y servicio para el paciente.
             </p>
             
-          <a href="/" class="text-[rgba(8,133,243,255)] bg-white hover:bg-[#6568E6] hover:text-[#fff] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  shadow-md py-2 w-52 text-center sm:self-start self-center" >Realiza tu consulta</a>
+          <a href="/contacto" class="text-[#8A88FF] bg-white hover:bg-[#8A88FF] hover:text-[#fff] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg  shadow-md py-2 w-52 text-center sm:self-start self-center" >Realiza tu consulta</a>
 
           <!--<a href="/" class="bg-white text-[rgba(8,133,243,255)] rounded-md shadow-md py-2 w-52 text-center sm:self-start self-center">Realiza tu consulta</a>-->
           </header>
