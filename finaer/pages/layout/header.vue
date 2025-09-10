@@ -1,141 +1,8 @@
-<!--<template>
-  <header
-    class="flex justify-between items-center py-4 px-20 bg-[rgba(255,255,255,0.5)] absolute left-0 top-0 w-full"
-  >
-    <a href="/">
-      <div class="w-48">
-        <img class="w-full h-full" src="../../assets/images/logo.png" alt="" />
-      </div>
-    </a>
-
-    <nav class="hidden lg:block">
-      <ul class="flex gap-8 items-center text-[#2C2F4C] font-medium">
-        <li class="active-menu">
-          <a
-            href="#"
-            class="text-[#6568E6] relative font-sans uppercase hover:underline"
-          >
-            Especialidades
-          </a>
-          <ul
-            class="shadow-lg absolute w-auto bg-white p-4 flex gap-5 hidden-menu"
-          >
-            <div class="flex flex-col gap-4">
-              <li>
-                <img
-                  src="../../assets/images/iconnefrologia.png"
-                  alt=""
-                  width="20px"
-                />
-                <a href="/nefrologia"> Nefrología </a>
-              </li>
-              <li>
-                <img
-                  src="../../assets/images/iconcardiologia.png"
-                  alt=""
-                  width="20px"
-                />
-                <a href="/cardiologia"> Cardiología </a>
-              </li>
-              <li>
-                <img
-                  src="../../assets/images/icondiabetologia.png"
-                  alt=""
-                  width="20px"
-                />
-                <a href="/diabetologia"> Diabetología </a>
-              </li>
-              <li>
-                <img
-                  src="../../assets/images/icondiagnostico.png"
-                  alt=""
-                  width="20px"
-                />
-                <a href="diagnostico"> Diagnóstico por imágenes </a>
-              </li>
-            </div>
-            <div class="flex flex-col gap-4">
-              <li>
-                <img
-                  src="../../assets/images/iconurologia.png"
-                  alt=""
-                  width="20px"
-                />
-                <a href="/uriologia"> Urología </a>
-              </li>
-              <li>
-                <img
-                  src="../../assets/images/iconnutricion.png"
-                  alt=""
-                  width="20px"
-                />
-                <a href="/nutricion"> Nutrición </a>
-              </li>
-            </div>
-          </ul>
-        </li>
-        <li>
-          <a
-            href="/nosotros"
-            class="font-sans uppercase hover:underline hover:text-[#6568E6]"
-          >
-            Nosotros
-          </a>
-        </li>
-        <li>
-          <a
-            href="/faq"
-            class="font-sans uppercase hover:underline hover:text-[#6568E6]"
-          >
-            Preguntas frecuentes
-          </a>
-        </li>
-        <li>
-          <a
-            href="/contacto"
-            class="font-sans uppercase hover:underline hover:text-[#6568E6]"
-          >
-            Contacto
-          </a>
-        </li>
-        <li>
-          <a
-            href="/turnos"
-            class="rounded-lg py-2 px-8 bg-[#008000] hover:bg-[#6568e6] text-white flex gap-3 font-sans uppercase"
-          >
-            Turnos
-            <svg
-              width="20px"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <path
-                fill="#ffffff"
-                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
-              />
-            </svg>
-          </a>
-        </li>
-        <li></li>
-      </ul>
-    </nav>
-
-    <button
-      class="flex flex-col gap-1.5 lg:hidden z-50"
-      @click="activeNavFunc()"
-    >
-      <div class="h-0.5 w-7 bg-black"></div>
-      <div class="h-0.5 w-7 bg-black"></div>
-      <div class="h-0.5 w-7 bg-black"></div>
-    </button>
-  </header>
-</template>-->
-
 <template>
   <header
     class="py-0 px-0 bg-[rgba(255,255,255,0.8)] absolute left-0 top-0 w-full"
   >
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <nav class="bg-white border-gray-200 dark:bg-gray-700">
       <div
         class="flex items-center justify-between max-w-screen-xl mx-auto p-4"
       >
@@ -181,9 +48,10 @@
           <button
             data-collapse-toggle="mega-menu-icons"
             type="button"
+            @click="activeNavFunc"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="mega-menu-icons"
-            aria-expanded="false"
+            :aria-expanded="activeNavbar"
           >
             <span class="sr-only">Menu</span>
             <svg
@@ -205,11 +73,13 @@
         </div>
         <div
           id="mega-menu-icons"
-          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          :class="[
+            'absolute right-0 top-full z-50 w-64 md:w-auto md:static md:flex md:w-auto md:order-1',
+            activeNavbar ? 'flex flex-col' : 'hidden'
+          ]"
         >
-          <ul
-            class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse"
-          >
+          <ul class="flex flex-col mt-0 font-medium space-y-1 md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse dark:bg-gray-700">
+
             <li>
               <button
                 id="mega-menu-icons-dropdown-button"
@@ -237,7 +107,7 @@
                 id="mega-menu-icons-dropdown"
                 class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md dark:border-gray-700 md:grid-cols-2 dark:bg-gray-700"
               >
-                <div class="p-4 pb-0 text-gray-900 md:pb-4 dark:text-white">
+                <div class="p-4 pb-4 text-gray-900 md:pb-4 dark:text-white">
                   <ul
                     class="space-y-4"
                     aria-labelledby="mega-menu-icons-dropdown-button"
