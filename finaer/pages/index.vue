@@ -34,7 +34,7 @@
   </div>
             <!-- Carousel debajo del botón -->
             <div id="default-carousel" 
-                class="relative w-full max-w-4xl mt-8 mx-auto"
+                class="relative w-full max-w-4xl mx-auto"
                 data-carousel="slide">
 
               <!-- Carousel wrapper -->

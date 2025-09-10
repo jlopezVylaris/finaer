@@ -4,7 +4,7 @@
     <main class="mt-10 h-auto overflow-hidden">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <!-- Texto -->
-        <div class="order-2 lg:order-1">
+        <div ref="textRef" :class="['order-2 lg:order-1 transition-all duration-1000 ease-out opacity-0 translate-y-10']">
           <h1 class="text-4xl md:text-5xl text-center lg:text-start font-bold w-full mb-4">
             <span class="text-[#8A88FF]">Urología</span>
           </h1>
@@ -21,7 +21,7 @@
         </div>
 
         <!-- Imagen -->
-        <div class="order-1 lg:order-2 flex justify-center">
+        <div ref="imageRef" :class="['order-1 lg:order-2 flex justify-center transition-all duration-1000 ease-out opacity-0 translate-y-10']">
           <img
             id="uro"
             class="rounded-lg shadow-xl"
@@ -32,7 +32,7 @@
       </div>
 
       <!-- Llamada a la acción -->
-      <div class="mt-12 text-center">
+      <div ref="ctaRef" :class="['mt-12 text-center transition-all duration-700 ease-out opacity-0 translate-y-10']">
         <a
           href="https://aplicacionmedicaweb.com.ar/tol-finaer/_client/turnosonline2.aspx"
           target="_blank"
@@ -52,6 +52,26 @@
 <script setup>
 import Header from "../layout/header.vue";
 import Footer from "../layout/footer.vue";
+import { ref, onMounted } from "vue";
+
+const textRef = ref(null)
+const imageRef = ref(null)
+const ctaRef = ref(null)
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('opacity-100','translate-y-0')
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.3 })
+
+  if(textRef.value) observer.observe(textRef.value)
+  if(imageRef.value) observer.observe(imageRef.value)
+  if(ctaRef.value) observer.observe(ctaRef.value)
+})
 </script>
 
 <style>
@@ -60,14 +80,5 @@ import Footer from "../layout/footer.vue";
   object-fit: cover;
   width: 100%;
   max-width: 600px;
-}
-
-.list-check li {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238A88FF'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E")
-    no-repeat left center;
-  background-size: 20px;
-  padding-left: 30px;
-  margin-bottom: 12px;
-  list-style: none;
 }
 </style>

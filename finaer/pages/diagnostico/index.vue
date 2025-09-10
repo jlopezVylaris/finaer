@@ -4,12 +4,14 @@
     <main class="mt-10 h-auto overflow-hidden">
       <!-- Título principal -->
       <h1
-        class="text-4xl sm:text-5xl mb-5 text-center font-extrabold tracking-tight"
+        ref="titleRef"
+        :class="['text-4xl sm:text-5xl mb-5 text-center font-extrabold tracking-tight transition-all duration-1000 ease-out', titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
       >
         <span class="text-[#8A88FF]">Diagnóstico por Imágenes</span>
       </h1>
       <p
-        class="text-center px-4 sm:px-10 lg:px-32 text-gray-700 text-lg leading-relaxed mb-12"
+        ref="subtitleRef"
+        :class="['text-center px-4 sm:px-10 lg:px-32 text-gray-700 text-lg leading-relaxed mb-12 transition-all duration-1000 ease-out', subtitleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10']"
       >
         Contamos con un centro médico de fácil acceso, con modernas y cómodas
         instalaciones, y equipamiento de última generación, lo que permite la
@@ -18,7 +20,8 @@
 
       <!-- Bloque 1 -->
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center bg-white rounded-2xl shadow-lg p-6 m-4"
+        ref="block1Ref"
+        :class="['grid grid-cols-1 sm:grid-cols-2 gap-6 items-center bg-white rounded-2xl shadow-lg p-6 m-4 transition-all duration-1000 ease-out opacity-0 translate-y-10']"
       >
         <!-- Lista -->
         <div>
@@ -56,7 +59,8 @@
 
       <!-- Bloque 2 -->
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center bg-white rounded-2xl shadow-lg p-6 m-4"
+        ref="block2Ref"
+        :class="['grid grid-cols-1 sm:grid-cols-2 gap-6 items-center bg-white rounded-2xl shadow-lg p-6 m-4 transition-all duration-1000 ease-out opacity-0 translate-y-10']"
       >
         <!-- Imagen -->
         <div>
@@ -90,7 +94,8 @@
           </ul>
         </div>
       </div>
-      <div class="mt-12 text-center">
+
+      <div ref="ctaRef" :class="['mt-12 text-center transition-all duration-700 ease-out opacity-0 translate-y-10']">
         <a
           href="https://aplicacionmedicaweb.com.ar/tol-finaer/_client/turnosonline2.aspx"
           target="_blank"
@@ -110,4 +115,43 @@
 <script setup>
 import Header from "../layout/header.vue";
 import Footer from "../layout/footer.vue";
+import { ref, onMounted } from "vue";
+
+const titleRef = ref(null)
+const subtitleRef = ref(null)
+const block1Ref = ref(null)
+const block2Ref = ref(null)
+const ctaRef = ref(null)
+
+const titleVisible = ref(false)
+const subtitleVisible = ref(false)
+const block1Visible = ref(false)
+const block2Visible = ref(false)
+const ctaVisible = ref(false)
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('opacity-100','translate-y-0')
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.3 })
+
+  if(titleRef.value) observer.observe(titleRef.value)
+  if(subtitleRef.value) observer.observe(subtitleRef.value)
+  if(block1Ref.value) observer.observe(block1Ref.value)
+  if(block2Ref.value) observer.observe(block2Ref.value)
+  if(ctaRef.value) observer.observe(ctaRef.value)
+})
 </script>
+
+<style>
+/* Ajuste de altura y aspecto de imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+</style>

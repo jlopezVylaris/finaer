@@ -3,8 +3,9 @@
     <Header />
     <main class="mt-10 h-auto overflow-hidden">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+
         <!-- Texto -->
-        <div class="order-2 lg:order-1">
+        <div ref="textRef" :class="['order-2 lg:order-1 transition-all duration-700 ease-out opacity-0 translate-y-10']">
           <h1 class="text-4xl md:text-5xl text-center lg:text-start font-bold w-full">
             <span class="text-[#8A88FF]">Cardiología</span>
           </h1>
@@ -28,23 +29,12 @@
             <ul class="text-lg list-check space-y-3">
               <li>Consulta de Cardiología</li>
               <li>Ecodoppler Cardíaco</li>
-              <!-- Si luego querés, descomento los que estaban -->
-              <!--
-              <li>Doppler Obstétrico</li>
-              <li>Ecocardiograma Transesofágico</li>
-              <li>Ecostress (Reposo/Ejercicio)</li>
-              <li>Ecostress Farmacológico</li>
-              <li>Electrocardiograma (Con/Sin Prueba de Esfuerzo)</li>
-              <li>Ergometría (12 Derivaciones)</li>
-              <li>Holter (3 Canales)</li>
-              <li>Presurometría</li>
-              -->
             </ul>
           </div>
         </div>
 
         <!-- Imagen -->
-        <div class="order-1 lg:order-2 flex justify-center">
+        <div ref="imgRef" :class="['order-1 lg:order-2 flex justify-center transition-all duration-1000 ease-out opacity-0 translate-y-10']">
           <img
             id="cardio"
             class="rounded-lg shadow-xl"
@@ -55,7 +45,7 @@
       </div>
 
       <!-- Llamada a la acción -->
-      <div class="mt-12 text-center">
+      <div ref="ctaRef" :class="['mt-12 text-center transition-all duration-700 ease-out opacity-0 translate-y-10']">
         <a
           href="https://aplicacionmedicaweb.com.ar/tol-finaer/_client/turnosonline2.aspx"
           target="_blank"
@@ -75,6 +65,26 @@
 <script setup>
 import Header from "../layout/header.vue";
 import Footer from "../layout/footer.vue";
+import { ref, onMounted } from "vue";
+
+const imgRef = ref(null)
+const textRef = ref(null)
+const ctaRef = ref(null)
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('opacity-100','translate-y-0')
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.3 })
+
+  if(imgRef.value) observer.observe(imgRef.value)
+  if(textRef.value) observer.observe(textRef.value)
+  if(ctaRef.value) observer.observe(ctaRef.value)
+})
 </script>
 
 <style>
