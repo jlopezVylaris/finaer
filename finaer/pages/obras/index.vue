@@ -45,7 +45,7 @@
           <div ref="logo8" class="flex justify-center items-center opacity-0 translate-y-10 transition-all duration-700" style="transition-delay: 300ms">
             <img src="../../assets/images/marcas/visitar1.jpeg" alt="VISITAR Logo" class="h-13" />
           </div>
-          <div ref="logo9" class="flex justify-center items-center opacity-0 translate-y-10 transition-all duration-700" style="transition-delay: 450ms">
+          <div ref="logo9" class="flex justify-center items-center opacity-0 translate-y-10 transition-all duration-700 mb-2" style="transition-delay: 450ms">
             <img src="../../assets/images/marcas/ospetelco.png" alt="OSPETELCO Logo" class="h-13" />
           </div>
         </div>
