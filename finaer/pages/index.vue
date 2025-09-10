@@ -3,7 +3,7 @@
 
     <Header/>
 
-    <main class="mt-10 h-auto lg:h-[400px] overflow-hidden">
+    <main class="mt-5 h-auto lg:h-[400px] overflow-hidden">
       <section class="flex flex-wrap text-[rgba(37,73,105,255)]">
 
         <div class="w-full flex flex-col gap-y-10 lg:flex-row items-center justify-between">
@@ -24,7 +24,7 @@
             </p>
             
             <a href="/contacto" 
-              class="text-[#8A88FF] bg-white hover:bg-[#8A88FF] hover:text-[#fff] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg shadow-md py-2 w-52 text-center  self-center">
+              class="text-[#fff] mb-6 bg-[#8A88FF] hover:bg-[#918FEB]/90 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg shadow-md py-2 w-52 text-center  self-center">
               Realiza tu consulta
             </a>
           </header>
@@ -117,26 +117,26 @@
 
         <article class="mt-12">
           <div class="px-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            
+
             <!-- Card 1 -->
             <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <h3 class="text-3xl font-bold text-gray-800">105.600+</h3>
+              <h3 class="text-3xl font-bold text-gray-800" ref="num1">0</h3>
               <p class="text-sm uppercase tracking-wide text-gray-500 mt-2">
                 Tratamientos de diálisis realizados
               </p>
             </div>
-            
+
             <!-- Card 2 -->
             <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <h3 class="text-3xl font-bold text-gray-800">8+</h3>
+              <h3 class="text-3xl font-bold text-gray-800" ref="num2">0</h3>
               <p class="text-sm uppercase tracking-wide text-gray-500 mt-2">
                 Años de Experiencia
               </p>
             </div>
-            
+
             <!-- Card 3 -->
             <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <h3 class="text-3xl font-bold text-gray-800">19.500+</h3>
+              <h3 class="text-3xl font-bold text-gray-800" ref="num3">0</h3>
               <p class="text-sm uppercase tracking-wide text-gray-500 mt-2">
                 Consultas en tratamientos
               </p>
@@ -148,14 +148,14 @@
         <article class="mt-16">
           <a
             href="/nosotros/"
-            class="px-9 py-3 text-[#8A88FF] bg-white hover:bg-[#8A88FF] hover:text-[#fff] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg shadow-md py-2 w-52 text-center sm:self-start self-center"
+            class="px-9 py-3 text-[#fff] bg-[#8A88FF] hover:bg-[#918FEB]/90 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg shadow-md py-2 w-52 text-center sm:self-start self-center"
           >
-            Conoce más...
+            Conoce más
           </a>
         </article>
       </div>
 
-      <article class="bg-white shadow-lg w-[90%] h-auto md:h-[250px] flex flex-col items-center justify-center p-4">
+      <article class="bg-white shadow-lg w-[90%] h-auto md:h-[250px] flex flex-col rounded-3xl items-center justify-center p-4">
         <div class="w-44">
           <img src="../assets/images/line.webp" alt="" class="w-full" />
         </div>
@@ -182,13 +182,30 @@ import Footer from "./layout/footer.vue";
 import Content from "./layout/content.vue";
 import Obras from "./obras";
 
-
 import { ref, onMounted, onUnmounted } from 'vue';
 
 const isVisible = ref(false);
 const aboutSection = ref(null);
 
+// Refs para los números de las cards
+const num1 = ref(null);
+const num2 = ref(null);
+const num3 = ref(null);
+
+// Animación rápida de números con efecto de "subida de 10 unidades"
+const animateNumberQuick = (el, end) => {
+  let start = end - 10; // inicio 10 números por debajo
+  const duration = 500; // 0.5 segundos
+  const stepTime = duration / 10; // 10 pasos
+  const timer = setInterval(() => {
+    start += 1;
+    el.innerText = start.toLocaleString();
+    if (start >= end) clearInterval(timer);
+  }, stepTime);
+};
+
 onMounted(() => {
+  // Animación de aparición de la sección "about"
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
@@ -206,8 +223,62 @@ onMounted(() => {
   onUnmounted(() => {
     if (aboutSection.value) observer.unobserve(aboutSection.value);
   });
+
+  // Inicializamos las transformaciones para animaciones de cards
+  if (num1.value) {
+    num1.value.parentElement.style.transform = "translateX(-50px)";
+    num1.value.parentElement.style.opacity = "0";
+    num1.value.parentElement.style.transition = "all 0.6s ease-out";
+  }
+  if (num2.value) {
+    num2.value.parentElement.style.opacity = "0";
+    num2.value.parentElement.style.transition = "opacity 0.6s ease-out";
+  }
+  if (num3.value) {
+    num3.value.parentElement.style.transform = "translateX(50px)";
+    num3.value.parentElement.style.opacity = "0";
+    num3.value.parentElement.style.transition = "all 0.6s ease-out";
+  }
+
+  // Animación de números y entrada de cards
+  const cards = [num1.value, num2.value, num3.value];
+  const targets = [105600, 8, 19500];
+
+  const cardContainer = document.querySelector('.px-7.grid');
+  const cardObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Animación de entrada de cada card
+          if (num1.value) {
+            num1.value.parentElement.style.transform = "translateX(0)";
+            num1.value.parentElement.style.opacity = "1";
+          }
+          if (num2.value) {
+            num2.value.parentElement.style.opacity = "1";
+          }
+          if (num3.value) {
+            num3.value.parentElement.style.transform = "translateX(0)";
+            num3.value.parentElement.style.opacity = "1";
+          }
+
+          // Animación de números
+          cards.forEach((card, i) => {
+            animateNumberQuick(card, targets[i]);
+          });
+
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  if (cardContainer) cardObserver.observe(cardContainer);
 });
 </script>
+
+
 
 <style>
 .bg-img {

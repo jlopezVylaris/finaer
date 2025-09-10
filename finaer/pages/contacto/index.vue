@@ -1,4 +1,4 @@
-<template>
+<template> 
   <div class="bg-[#ecf6ff] px-4 md:px-16 lg:px-24 pb-10 pt-28">
     <Header />
     <main class="mt-10 h-auto overflow-hidden">
@@ -9,141 +9,106 @@
         Visítanos en nuestras redes sociales y conoce mucho más sobre nosotros!
       </p>
 
-      <div class="columns-1 flex justify-center mt-12 mb-12">
-        <a href="https://www.facebook.com/CentroMedicoFINAER" target="_blank"
-          ><button
-            type="button"
-            class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 me-2 mb-2"
+      <!-- Contenedor de botones responsive -->
+      <div class="flex flex-col md:flex-row justify-center items-center mt-12 mb-12 gap-4 w-full">
+        <!-- Botón Facebook -->
+        <a href="https://www.facebook.com/CentroMedicoFINAER" target="_blank" class="w-full md:w-auto">
+          <button type="button"
+            class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 w-full md:w-auto"
           >
-            <svg
-              class="w-4 h-4 me-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 8 19"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                clip-rule="evenodd"
-              />
-            </svg>
             Facebook
-          </button></a
-        >
+          </button>
+        </a>
 
-        <a href="https://www.instagram.com/centrofinaer" target="_blank">
-          <button
-            type="button"
-            class="text-white bg-[#ff8214] hover:bg-[#ff6908]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2"
+        <!-- Botón Instagram -->
+        <a href="https://www.instagram.com/centrofinaer" target="_blank" class="w-full md:w-auto">
+          <button type="button"
+            class="text-white bg-[#ff8214] hover:bg-[#ff6908]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 w-full md:w-auto"
           >
-            <svg
-              class="w-4 h-4 me-2"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="30"
-              height="30"
-              viewBox="0,0,256,256"
-            >
-              <g
-                fill="#ffffff"
-                fill-rule="nonzero"
-                stroke="none"
-                stroke-width="1"
-                stroke-linecap="butt"
-                stroke-linejoin="miter"
-                stroke-miterlimit="10"
-                stroke-dasharray=""
-                stroke-dashoffset="0"
-                font-family="none"
-                font-weight="none"
-                font-size="none"
-                text-anchor="none"
-                style="mix-blend-mode: normal"
-              >
-                <g transform="scale(5.33333,5.33333)">
-                  <path
-                    d="M16.5,5c-6.33361,0 -11.5,5.16639 -11.5,11.5v15c0,6.33276 5.16621,11.5 11.5,11.5h15c6.33294,0 11.5,-5.16706 11.5,-11.5v-15c0,-6.33379 -5.16724,-11.5 -11.5,-11.5zM16.5,8h15c4.71124,0 8.5,3.78779 8.5,8.5v15c0,4.71106 -3.78894,8.5 -8.5,8.5h-15c-4.71221,0 -8.5,-3.78876 -8.5,-8.5v-15c0,-4.71239 3.78761,-8.5 8.5,-8.5zM34,12c-1.105,0 -2,0.895 -2,2c0,1.105 0.895,2 2,2c1.105,0 2,-0.895 2,-2c0,-1.105 -0.895,-2 -2,-2zM24,14c-5.50482,0 -10,4.49518 -10,10c0,5.50482 4.49518,10 10,10c5.50482,0 10,-4.49518 10,-10c0,-5.50482 -4.49518,-10 -10,-10zM24,17c3.88318,0 7,3.11682 7,7c0,3.88318 -3.11682,7 -7,7c-3.88318,0 -7,-3.11682 -7,-7c0,-3.88318 3.11682,-7 7,-7z"
-                  ></path>
-                </g>
-              </g>
-            </svg>
             Instagram
-          </button></a
-        >
+          </button>
+        </a>
 
-        <a href="https://wa.me/5491122664785" target="_blank">
-          <button
-            type="button"
-            class="text-white bg-[#25D366] hover:bg-[#59CE72]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2"
+        <!-- Botón WhatsApp -->
+        <a href="https://wa.me/5491122664785" target="_blank" class="w-full md:w-auto">
+          <button type="button"
+            class="text-white bg-[#25D366] hover:bg-[#59CE72]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 w-full md:w-auto"
           >
-          <svg
-              class="w-4 h-4 me-2"
-              width="15px"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <path
-                fill="#ffffff"
-                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
-              />
-        </svg>
             WhatsApp
-          </button></a
-        >
+          </button>
+        </a>
 
-        <a href="tel:+5448628879" target="_blank">
-          <button
-            type="button"
-            class="text-white bg-[#075e54] hover:bg-[#075E54]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2"
+        <!-- Botón Línea directa -->
+        <a href="tel:+5448628879" target="_blank" class="w-full md:w-auto">
+          <button type="button"
+            class="text-white bg-[#075e54] hover:bg-[#075E54]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 w-full md:w-auto"
           >
-          <svg
-              class="w-4 h-4 me-2"
-              width="15px"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <path
-                fill="#ffffff"
-                d="M256,32c123.5,0,224,100.5,224,224S379.5,480,256,480S32,379.5,32,256S132.5,32,256,32 M256,0C114.625,0,0,114.625,0,256  s114.625,256,256,256s256-114.625,256-256S397.375,0,256,0L256,0z M398.719,341.594l-1.438-4.375  c-3.375-10.063-14.5-20.563-24.75-23.375L334.688,303.5c-10.25-2.781-24.875,0.969-32.406,8.5l-13.688,13.688  c-49.75-13.469-88.781-52.5-102.219-102.25l13.688-13.688c7.5-7.5,11.25-22.125,8.469-32.406L198.219,139.5  c-2.781-10.25-13.344-21.375-23.406-24.75l-4.313-1.438c-10.094-3.375-24.5,0.031-32,7.563l-20.5,20.5  c-3.656,3.625-6,14.031-6,14.063c-0.688,65.063,24.813,127.719,70.813,173.75c45.875,45.875,108.313,71.344,173.156,70.781  c0.344,0,11.063-2.281,14.719-5.938l20.5-20.5C398.688,366.063,402.063,351.656,398.719,341.594z"
-              />
-        </svg>
-            Linea directa
-          </button></a
-        >
+            Línea directa
+          </button>
+        </a>
 
-        <a href="https://aplicacionmedicaweb.com.ar/tol-finaer/_client/turnosonline2.aspx" target="_blank">
-          <button
-            type="button"
-            class="text-white bg-[#8A88FF] hover:bg-[#918FEB]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2"
+        <!-- Botón Turnos Online -->
+        <a href="https://aplicacionmedicaweb.com.ar/tol-finaer/_client/turnosonline2.aspx" target="_blank" class="w-full md:w-auto">
+          <button type="button"
+            class="text-white bg-[#8A88FF] hover:bg-[#918FEB]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 w-full md:w-auto"
           >
-          <svg
-              class="w-4 h-4 me-2"
-              width="15px"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <path
-                fill="#ffffff"
-                d="M256,32c123.5,0,224,100.5,224,224S379.5,480,256,480S32,379.5,32,256S132.5,32,256,32 M256,0C114.625,0,0,114.625,0,256  s114.625,256,256,256s256-114.625,256-256S397.375,0,256,0L256,0z M398.719,341.594l-1.438-4.375  c-3.375-10.063-14.5-20.563-24.75-23.375L334.688,303.5c-10.25-2.781-24.875,0.969-32.406,8.5l-13.688,13.688  c-49.75-13.469-88.781-52.5-102.219-102.25l13.688-13.688c7.5-7.5,11.25-22.125,8.469-32.406L198.219,139.5  c-2.781-10.25-13.344-21.375-23.406-24.75l-4.313-1.438c-10.094-3.375-24.5,0.031-32,7.563l-20.5,20.5  c-3.656,3.625-6,14.031-6,14.063c-0.688,65.063,24.813,127.719,70.813,173.75c45.875,45.875,108.313,71.344,173.156,70.781  c0.344,0,11.063-2.281,14.719-5.938l20.5-20.5C398.688,366.063,402.063,351.656,398.719,341.594z"
-              />
-        </svg>
-            Turnos Online 
-          </button></a
-        >
+            Turnos Online
+          </button>
+        </a>
       </div>
     </main>
   </div>
   <Footer />
 </template>
 
+
 <script setup>
+import { ref, onMounted } from "vue";
 import Header from "../layout/header.vue";
-import Banner from "../layout/banner.vue";
 import Footer from "../layout/footer.vue";
-import Content from "../layout/content.vue";
+
+const btn1 = ref(null);
+const btn2 = ref(null);
+const btn3 = ref(null);
+const btn4 = ref(null);
+const btn5 = ref(null);
+
+onMounted(() => {
+  const buttons = [btn1.value, btn2.value, btn3.value, btn4.value, btn5.value];
+
+  buttons.forEach((btn, index) => {
+    if (btn) {
+      // Inicial posición a la izquierda y opacidad 0
+      btn.style.transform = "translateX(-50px)";
+      btn.style.transition = "all 0.5s ease-out";
+    }
+  });
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        buttons.forEach((btn, index) => {
+          setTimeout(() => {
+            btn.style.opacity = "1";
+            btn.style.transform = "translateX(0)";
+          }, index * 200); // animación escalonada: 200ms de diferencia
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  // Observamos el contenedor de botones
+  const container = document.querySelector(".flex.flex-col.md\\:flex-row");
+  if (container) observer.observe(container);
+});
 </script>
 
-<style></style>
+<style>
+/* Fuerza que en mobile se vean en columna */
+@media (max-width: 768px) {
+  .flex.flex-col.md\:flex-row > a {
+    width: 100%;
+  }
+}
+</style>

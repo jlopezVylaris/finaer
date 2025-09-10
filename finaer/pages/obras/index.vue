@@ -46,10 +46,9 @@
             <img src="../../assets/images/marcas/visitar1.jpeg" alt="VISITAR Logo" class="h-13" />
           </div>
           <div ref="logo9" class="flex justify-center items-center opacity-0 translate-y-10 transition-all duration-700" style="transition-delay: 450ms">
-            <img src="../../assets/images/marcas/ospetelco1.jpg" alt="OSPETELCO Logo" class="h-13" />
+            <img src="../../assets/images/marcas/ospetelco.png" alt="OSPETELCO Logo" class="h-13" />
           </div>
         </div>
-
       </div>
     </section>
   </div>
